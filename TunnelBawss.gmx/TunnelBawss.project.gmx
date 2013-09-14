@@ -6,20 +6,29 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\S_Avatar</sprite>
+    <sprite>sprites\sprAvatarIdle</sprite>
+    <sprite>sprites\sprAvatarWalk</sprite>
+    <sprite>sprites\sprAvatarSuck</sprite>
     <sprite>sprites\s_dirt</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\sprite3</sprite>
+    <sprite>sprites\sprRock</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\bgRocks</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\dirtObj</object>
     <object>objects\AvatarObj</object>
     <object>objects\object2</object>
+    <objects name="Blocks">
+      <object>objects\objBlock</object>
+      <object>objects\objDirtBlock</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\mikesRoom</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

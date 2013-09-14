@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="dirtObj">
+    <event eventtype="4" ename="objDirtBlock">
       <action>
         <libid>1</libid>
         <id>101</id>
