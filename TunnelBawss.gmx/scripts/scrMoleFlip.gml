@@ -1,11 +1,11 @@
-if(self.timer > 10){
-    self.direction = 1 - self.direction
-    if(self.direction > 0){
-        x -= self.flipOffset
-        image_xscale = 1
+if(argument0.timer > 20){
+    argument0.direction = 1 - argument0.direction
+    if(argument0.direction > 0){
+        argument0.image_xscale = 1
+        //argument0.x -= argument0.flipOffset
     } else {
-        x += self.flipOffset
-        image_xscale = -1
+        //argument0.x += argument0.flipOffset
+        argument0.image_xscale = -1
     }
-    self.timer = 0
+    argument0.timer = 0
 }
