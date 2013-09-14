@@ -26,12 +26,13 @@
     <object>objects\AvatarObj</object>
     <objects name="Blocks">
       <object>objects\objDirtBlock</object>
+      <object>objects\objRockBlock</object>
     </objects>
     <object>objects\enemMole</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\mikesRoom2</room>
     <room>rooms\qihansRoom</room>
+    <room>rooms\mikesRoom2</room>
     <room>rooms\noahsRoom</room>
     <room>rooms\marksRoom</room>
     <room>rooms\justinsRoom</room>
