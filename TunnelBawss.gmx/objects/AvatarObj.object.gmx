@@ -33,6 +33,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_speed</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0.3</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -54,16 +78,15 @@
             <string>// ___________________________________________________________________ Movement
 if (keyboard_check(vk_left) || (joystick_exists(1) &amp;&amp; joystick_direction(1) == vk_numpad4)) {
     x -= self.speedX;
-    object_set_sprite(AvatarObj, sprAvatarWalk);
+    sprite_index = sprAvatarWalk;
     image_xscale = 1;
-    image_index++;
-}
-
-if (keyboard_check(vk_right) || (joystick_exists(1) &amp;&amp; joystick_direction(1) == vk_numpad6)) {
+} else if (keyboard_check(vk_right) || (joystick_exists(1) &amp;&amp; joystick_direction(1) == vk_numpad6)) {
     x += self.speedX;
-    object_set_sprite(AvatarObj, sprAvatarWalk);
+    sprite_index = sprAvatarWalk;
     image_xscale = -1;
-    image_index++;
+} else {
+    sprite_index = sprAvatarIdle;
+    image_index = 1;
 }
 </string>
           </argument>
