@@ -33,7 +33,7 @@ var UIY = view_yview + (self.sprite_height / 2);
 draw_sprite(sprInventoryBar, 0, UIX, UIY);
 
 // Draw Inventory
-var currentX = UIX - (self.sprite_width / 2) + 115;
+var currentX = UIX - (self.sprite_width / 2) + 45;
 for (i = 0; i &lt; ds_list_size(global.vacuumStack); i++) {
     var type = ds_list_find_value(global.vacuumStack, i);
     

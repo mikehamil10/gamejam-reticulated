@@ -12,16 +12,13 @@
     <sound>sound\levelEndTheme</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprAvatarIdle</sprite>
-    <sprite>sprites\sprAvatarWalk</sprite>
-    <sprite>sprites\sprAvatarSuck</sprite>
-    <sprite>sprites\sprDirt</sprite>
-    <sprite>sprites\sprRock</sprite>
-    <sprite>sprites\sprMoleIdle</sprite>
-    <sprite>sprites\sprMoleHop</sprite>
-    <sprite>sprites\sprSpiderIdle</sprite>
-    <sprite>sprites\sprSpiderHanging</sprite>
-    <sprite>sprites\VacUI</sprite>
+    <sprites name="Player">
+      <sprite>sprites\sprAvatarIdle</sprite>
+      <sprite>sprites\sprAvatarWalk</sprite>
+      <sprite>sprites\sprAvatarSuck</sprite>
+      <sprite>sprites\sprAvatarSuckUp</sprite>
+      <sprite>sprites\sprAvatarSuckDown</sprite>
+    </sprites>
     <sprites name="UI">
       <sprite>sprites\sprInventoryBar</sprite>
       <sprite>sprites\sprHeart1</sprite>
@@ -34,8 +31,19 @@
       <sprite>sprites\sprInventoryTorch</sprite>
       <sprite>sprites\sprInventoryOil</sprite>
     </sprites>
-    <sprite>sprites\levelEnd</sprite>
-    <sprite>sprites\bomb</sprite>
+    <sprites name="Enemies">
+      <sprite>sprites\sprMoleIdle</sprite>
+      <sprite>sprites\sprMoleHop</sprite>
+      <sprite>sprites\sprSpiderIdle</sprite>
+      <sprite>sprites\sprSpiderHanging</sprite>
+    </sprites>
+    <sprites name="Blocks">
+      <sprite>sprites\sprRock</sprite>
+      <sprite>sprites\sprDirt</sprite>
+      <sprite>sprites\bomb</sprite>
+      <sprite>sprites\levelEnd</sprite>
+    </sprites>
+    <sprite>sprites\VacUI</sprite>
     <sprite>sprites\sprite22</sprite>
     <sprite>sprites\sprExplosion</sprite>
   </sprites>
@@ -58,6 +66,7 @@
     <objects name="Blocks">
       <object>objects\objDirtBlock</object>
       <object>objects\objRockBlock</object>
+      <object>objects\objBlock</object>
     </objects>
     <object>objects\enemMole</object>
     <object>objects\enemSpider</object>
