@@ -6,7 +6,7 @@ if(suckTarget != noone){
 }
 //TODO: check for other suckable stuff and get the closest
 
-if(abs(suckTarget.centerX - argument0 < 50) && abs(suckTarget.centerY - argument1) < 50){
+if(abs(suckTarget.centerX - argument0 < 80) && abs(suckTarget.centerY - argument1) < 80){
     with(suckTarget){
         instance_destroy();
     }
