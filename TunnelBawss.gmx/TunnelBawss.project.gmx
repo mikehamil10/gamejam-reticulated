@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndThemeMusic</sound>
+    <sound>sound\sndVacuumForward</sound>
+    <sound>sound\sndVacuumReverse</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprAvatarIdle</sprite>
     <sprite>sprites\sprAvatarWalk</sprite>
@@ -52,6 +56,7 @@
     <object>objects\enemSpider</object>
     <object>objects\ObjVacUI</object>
     <object>objects\UI</object>
+    <object>objects\objSoundPlayer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mikesRoom2</room>

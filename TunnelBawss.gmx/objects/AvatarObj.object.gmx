@@ -470,21 +470,25 @@ if (self.spriteMode == 4) {
     
     // ________________________________________________________________ Sucking
     if ((keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_down)) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 3) &amp;&amp; joystick_direction(1) == vk_numpad2)){
+        sound_play(sndVacuumForward);
         self.suckDirection = "down";
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
     } else if ((keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_up)) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 3) &amp;&amp; joystick_direction(1) == vk_numpad8)){
+        sound_play(sndVacuumForward);
         self.suckDirection = "up";
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
     } else if (keyboard_check_pressed(vk_lcontrol) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 3))) {
+        sound_play(sndVacuumForward);
         self.suckDirection = "side";
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
     } else if (keyboard_check_pressed(vk_lshift) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 2))) { //TODO: controller equivalent
+        sound_play(sndVacuumReverse);
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 5;
@@ -514,7 +518,7 @@ if (self.spriteMode == 4) {
             <kind>1</kind>
             <string>if(!self.hitFrame){
     health--;
-    alarm[1] = 180;
+    alarm[0] = 100;
     self.hitFrame = true;
 }
 </string>
@@ -567,9 +571,9 @@ if (self.spriteMode == 4) {
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>32,16</point>
     <point>96,16</point>
     <point>96,96</point>
     <point>32,96</point>
+    <point>32,16</point>
   </PhysicsShapePoints>
 </object>
