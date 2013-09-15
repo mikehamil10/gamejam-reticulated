@@ -290,7 +290,8 @@ if (self.spriteMode == 4) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>side_hit = place_meeting(phy_position_x + sign(hspeed), phy_position_y, other);
+            <string>/*
+side_hit = place_meeting(phy_position_x + sign(hspeed), phy_position_y, other);
 bottom_hit = place_meeting(phy_position_x, phy_position_y+1, other);
 
 if (side_hit &amp;&amp; bottom_hit &amp;&amp; self.isJumping) {
@@ -305,7 +306,35 @@ else if (bottom_hit) {
     self.canResetJump = true;
     self.isJumping = false;
 }
+*/
 
+//bottom_hit = place_meeting(phy_position_xprevious, phy_position_y+1, other);
+
+dx = self.x - other.x;
+dy = self.y - other.y;
+/*
+if (dx != 0) {
+    if (abs(dy/dx) &lt; 0.49) {
+        physics_apply_impulse(phy_position_x, phy_position_y, 0, 15*sign(dx));
+    }
+}
+*/
+if (dy != 0) {
+    if (abs(dx/dy) &lt; 0.49) {
+        bottom_hit = true;
+    }
+    else {
+        bottom_hit = false;
+    }
+}
+else {
+    bottom_hit = false;
+}
+
+if (bottom_hit &amp;&amp; (keyboard_check_released(vk_space) || (joystick_exists(1) &amp;&amp; !joystick_check_button(1, 1))) &amp;&amp; phy_linear_velocity_y == 0) {
+        self.canResetJump = true;
+        self.isJumping = false;
+}
 </string>
           </argument>
         </arguments>
