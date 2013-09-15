@@ -6,10 +6,10 @@ if(ds_list_size(global.vacuumStack) > global.vacuumSize){
 var suckTarget = instance_nearest(argument0, argument1, objDirtBlock);
 var suckTarget2 = instance_nearest(argument0, argument1, objBomb);
 if(suckTarget != noone){
-if (suckTarget<suckTarget2){
+if (suckTarget2<suckTarget){
     returnString = "dirt";
     }
-    if(suckTarget2<suckTarget){
+    if(suckTarget<suckTarget2){
     returnString = "bomb";
     }
 }

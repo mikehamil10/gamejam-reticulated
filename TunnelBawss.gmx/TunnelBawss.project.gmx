@@ -43,6 +43,7 @@
     <background>background\background0</background>
     <background>background\bgRocks</background>
     <background>background\bgCave</background>
+    <background>background\background3</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -66,12 +67,14 @@
     <object>objects\objEndDoor</object>
     <object>objects\objBomb</object>
     <object>objects\objExplosion</object>
+    <object>objects\startListener</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Introscreen</room>
     <room>rooms\noahsRoom</room>
     <room>rooms\puzzleroom2</room>
-    <room>rooms\mikesRoom2</room>
     <room>rooms\qihansRoom</room>
+    <room>rooms\mikesRoom2</room>
     <room>rooms\marksRoom</room>
   </rooms>
   <help>
