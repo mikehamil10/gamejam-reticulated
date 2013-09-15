@@ -67,6 +67,7 @@
       <object>objects\objDirtBlock</object>
       <object>objects\objRockBlock</object>
       <object>objects\objBlock</object>
+      <object>objects\objBomb</object>
     </objects>
     <object>objects\enemMole</object>
     <object>objects\enemSpider</object>
@@ -74,7 +75,6 @@
     <object>objects\UI</object>
     <object>objects\objSoundPlayer</object>
     <object>objects\objEndDoor</object>
-    <object>objects\objBomb</object>
     <object>objects\objExplosion</object>
     <object>objects\startListener</object>
   </objects>

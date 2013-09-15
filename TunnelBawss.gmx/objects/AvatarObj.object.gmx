@@ -164,8 +164,12 @@ if (self.spriteMode == 4) {
         if(item != "" ){
             var targetX = self.x;
             var targetY = self.y;
-            targetX -= (image_xscale * 96);
+            
+            //extra check to ensure proper horizontal blowing target:
+            if (image_xscale &gt; 0) targetX -= (image_xscale * 48);
+            else targetX -= (image_xscale * 96);
             targetY += 96;
+            
             if(item == "dirt"){
                 show_debug_message("Pre: x: " + string(targetX) + "   y: " + string(targetY));
                 targetX = targetX - (targetX % 96)

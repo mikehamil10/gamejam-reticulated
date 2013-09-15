@@ -1,22 +1,33 @@
 
 var returnString = "";
-if(ds_list_size(global.vacuumStack) > global.vacuumSize){
+if(ds_list_size(global.vacuumStack) >= global.vacuumSize){
     return "";
 }
-var suckTarget = instance_nearest(argument0, argument1, objDirtBlock);
+
+var suckTarget  = instance_nearest(argument0, argument1, objDirtBlock);
 var suckTarget2 = instance_nearest(argument0, argument1, objBomb);
-if(suckTarget != noone){
-if (suckTarget2<suckTarget){
-    returnString = "dirt";
+
+var dirtDistance = point_distance(argument0, argument1, suckTarget.x, suckTarget.y);
+var bombDistance = point_distance(argument0, argument1, suckTarget2.x, suckTarget2.y);
+
+var selectedDistance = 100;
+var selectedItem;
+
+//if(suckTarget != noone){
+    if (dirtDistance < bombDistance){
+        returnString = "dirt";
+        selectedDistance = dirtDistance;
+        selectedItem = suckTarget;
+    } else if (bombDistance < dirtDistance){
+        returnString = "bomb";
+        selectedDistance = bombDistance;
+        selectedItem = suckTarget2;
     }
-    if(suckTarget<suckTarget2){
-    returnString = "bomb";
-    }
-}
+//}
 //TODO: check for other suckable stuff and get the closest
 
-if(abs(suckTarget.x - argument0 < 80) && abs(suckTarget.y - argument1) < 80){
-    with(suckTarget){
+if(selectedDistance < 100){
+    with(selectedItem){
         instance_destroy();
     }
 } else {

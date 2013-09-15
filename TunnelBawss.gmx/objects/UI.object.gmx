@@ -33,13 +33,26 @@ var UIY = view_yview + (self.sprite_height / 2);
 draw_sprite(sprInventoryBar, 0, UIX, UIY);
 
 // Draw Inventory
+var inventorySize = ds_list_size(global.vacuumStack);
 var currentX = UIX - (self.sprite_width / 2) + 45;
-for (i = 0; i &lt; ds_list_size(global.vacuumStack); i++) {
-    var type = ds_list_find_value(global.vacuumStack, i);
+for (j = 0; j &lt; inventorySize; j++) {
+    var type = ds_list_find_value(global.vacuumStack, j);
     
     if (type == "dirt") {
-        draw_sprite(sprInventoryDirt, 0, currentX, UIY - 36);
+        if (inventorySize &gt;= global.vacuumSize) {
+            draw_sprite_ext(sprInventoryDirt, 0, currentX, UIY - 36, 1, 1, 0, c_white, 0.5);
+        } else {
+            draw_sprite(sprInventoryDirt, 0, currentX, UIY - 36);
+        }
     }
+    if (type == "bomb") {
+        if (inventorySize &gt;= global.vacuumSize) {
+            draw_sprite_ext(sprInventoryDynamite, 0, currentX, UIY - 36, 1, 1, 0, c_white, 0.5);
+        } else {
+            draw_sprite(sprInventoryDynamite, 0, currentX, UIY - 36);
+        }
+    }
+   
     // else if other types here!
     
     currentX += 70;
