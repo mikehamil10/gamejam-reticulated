@@ -182,7 +182,7 @@ if(self.isMoving &gt; 0){
     }
     
     //keep the number of steps taken so the mole doesn't flip too quickly
-    self.timer += 1
+    self.timer += 1;
 } else {
     sprite_index = sprMoleIdle
 }
