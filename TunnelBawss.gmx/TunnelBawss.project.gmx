@@ -8,6 +8,8 @@
     <sound>sound\sndThemeMusic</sound>
     <sound>sound\sndVacuumForward</sound>
     <sound>sound\sndVacuumReverse</sound>
+    <sound>sound\sound3</sound>
+    <sound>sound\levelEndTheme</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprAvatarIdle</sprite>
@@ -33,6 +35,8 @@
       <sprite>sprites\sprInventoryOil</sprite>
     </sprites>
     <sprite>sprites\levelEnd</sprite>
+    <sprite>sprites\bomb</sprite>
+    <sprite>sprites\sprite22</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -59,13 +63,16 @@
     <object>objects\UI</object>
     <object>objects\objSoundPlayer</object>
     <object>objects\objEndDoor</object>
+    <object>objects\objBomb</object>
+    <object>objects\object10</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
-    <room>rooms\mikesRoom2</room>
     <room>rooms\noahsRoom</room>
+    <room>rooms\puzzleroom2</room>
+    <room>rooms\mikesRoom2</room>
     <room>rooms\qihansRoom</room>
     <room>rooms\marksRoom</room>
-    <room>rooms\mikesRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
