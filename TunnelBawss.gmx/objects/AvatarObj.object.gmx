@@ -412,10 +412,12 @@ if (self.spriteMode == 4) {
             var targetX = self.x;
             var targetY = self.y;
             targetX -= (image_xscale * 96);
-            targetY += 48
+            targetY += 96;
             if(item == "dirt"){
+                show_debug_message("Pre: x: " + string(targetX) + "   y: " + string(targetY));
                 targetX = targetX - (targetX % 96)
                 targetY = targetY - (targetY % 96)
+                show_debug_message("Post: x: " + string(targetX) + "   y: " + string(targetY));
                 with(objDirtBlock){
                     if(place_free(targetX, targetY)){
                         instance_create(targetX, targetY, objDirtBlock);
