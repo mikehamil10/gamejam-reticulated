@@ -57,6 +57,7 @@
     <room>rooms\noahsRoom</room>
     <room>rooms\marksRoom</room>
     <room>rooms\justinsRoom</room>
+    <room>rooms\qihansRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
