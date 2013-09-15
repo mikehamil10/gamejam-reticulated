@@ -3,7 +3,7 @@
   <spriteName>sprInventoryBar</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,36 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(sprInventoryBar, 0, view_xview + 15, view_yview + 45);
+            <string>// Determine starting position of entire UI
+var UIX = view_xview + (self.sprite_width / 2);
+var UIY = view_yview + (self.sprite_height / 2);
+
+// Draw Inventory Bar
+draw_sprite(sprInventoryBar, 0, UIX, UIY);
+
+// Draw Inventory
+var currentX = UIX - (self.sprite_width / 2) + 115;
+for (i = 0; i &lt; ds_list_size(global.vacuumStack); i++) {
+    var type = ds_list_find_value(global.vacuumStack, i);
+    
+    if (type == "dirt") {
+        draw_sprite(sprInventoryDirt, 0, currentX, UIY - 36);
+    }
+    // else if other types here!
+    
+    currentX += 70;
+}
+
+// Draw Health
+if (health &gt;= 1) {
+    draw_sprite(sprHeart1, 0, UIX + 240, UIY - 36);
+    if (health &gt;= 2) {
+        draw_sprite(sprHeart2, 0, UIX + 240, UIY - 36);
+        if (health &gt;= 3) {
+            draw_sprite(sprHeart3, 0, UIX + 240, UIY - 36);
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
