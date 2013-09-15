@@ -21,6 +21,10 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scrMoleFlip.gml</script>
+    <script>scripts\scrVacuumSuck.gml</script>
+    <script>scripts\scrVacuumBlow.gml</script>
+    <script>scripts\scrVacuumBuild.gml</script>
+    <script>scripts\scrSuckObject.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\AvatarObj</object>
