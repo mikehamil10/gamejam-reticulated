@@ -32,6 +32,7 @@
   <backgrounds name="background">
     <background>background\background0</background>
     <background>background\bgRocks</background>
+    <background>background\bgCave</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
