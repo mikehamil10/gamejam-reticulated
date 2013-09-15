@@ -47,7 +47,7 @@
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>object10</object>
+            <object>objExplosion</object>
           </argument>
           <argument>
             <kind>4</kind>

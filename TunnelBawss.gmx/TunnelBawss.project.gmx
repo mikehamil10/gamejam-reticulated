@@ -37,6 +37,7 @@
     <sprite>sprites\levelEnd</sprite>
     <sprite>sprites\bomb</sprite>
     <sprite>sprites\sprite22</sprite>
+    <sprite>sprites\sprExplosion</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -64,9 +65,8 @@
     <object>objects\objSoundPlayer</object>
     <object>objects\objEndDoor</object>
     <object>objects\objBomb</object>
-    <object>objects\object10</object>
+    <object>objects\objExplosion</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\noahsRoom</room>
     <room>rooms\puzzleroom2</room>
