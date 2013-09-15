@@ -402,13 +402,13 @@ if (self.spriteMode == 4) {
         //reset sucking counter so we can spit out another object
         self.suck = 0;
         self.spriteMode = 0;
-    } else if (image_index &gt; 6 &amp;&amp; self.suck == 0){
+    } else if (image_index &gt; 6 &amp;&amp; self.suck == 0 ){
         //don't spit out more than one object
         self.suck = 1;
         //spit shit out
         var item = scrVacuumBlow();
         //find the location we want to start the object to appear around
-        if(item != ""){
+        if(item != "" ){
             var targetX = self.x;
             var targetY = self.y;
             targetX -= (image_xscale * 96);
@@ -431,7 +431,7 @@ if (self.spriteMode == 4) {
                     }
                 }
             }
-        }
+        }//if blowing
     }
 } else {
     // No. Handle movement

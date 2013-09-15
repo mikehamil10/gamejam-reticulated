@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>5</string>
           </argument>
         </arguments>
       </action>
@@ -218,7 +218,7 @@ if(self.isMoving &gt; 0){
         phy_position_x += self.moveSpeed
     }
     
-    //keep the number of steps taken so the mole doesn't flip too quickly
+    //keep the number of steps taken so the mole/spider doesn't flip too quickly
     self.timer += 1
 } else {
       // NEED A apider cycle //
@@ -269,26 +269,6 @@ if(self.isMoving &gt; 0){
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>104</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_vspeed</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>-45</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="4" ename="objDirtBlock">
       <action>
@@ -307,7 +287,7 @@ if(self.isMoving &gt; 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!place_free(self.x + 1, y) || !place_free(self.x - 1, y)){
+            <string>if(!place_free(self.x + 23, y) || !place_free(self.x - 23, y)){
     scrMoleFlip(self)
 }
 </string>
