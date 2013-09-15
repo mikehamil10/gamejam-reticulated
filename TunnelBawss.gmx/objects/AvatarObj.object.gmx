@@ -29,7 +29,7 @@
 
 // _______________________________________________________Adjustable Properties
 speedX    = 5;      // horizontal velocity
-jumpForce = 1500;   // vertical velocity when jumping
+jumpForce = 1400;   // vertical velocity when jumping
 image_speed   = 0.2;    // animation speed
 health        = 3;      // "hit points" the player starts with
 
@@ -41,7 +41,6 @@ canResetJump = false;
 hitFrame = false;
 suckDirection = "";
 
-phy_fixed_rotation = true;
 scrVacuumBuild()
 </string>
           </argument>
@@ -71,6 +70,32 @@ scrVacuumBuild()
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>canResetJump</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -89,6 +114,8 @@ scrVacuumBuild()
           <argument>
             <kind>1</kind>
             <string>// always keep our dude upright
+phy_rotation = 0;
+//phy_fixed_rotation = true;
 
 
 // ___________________________________________________________________ Movement
@@ -237,6 +264,7 @@ if (self.spriteMode == 4) {
     if (!self.isJumping &amp;&amp; (keyboard_check_pressed(vk_space) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 1)))) {
         self.isJumping = true;
         self.canResetJump = false;
+        alarm[0] = 10;
         physics_apply_impulse(phy_position_x, phy_position_y, 0, -self.jumpForce);
         self.spriteMode = 3;
     } 
@@ -266,44 +294,6 @@ if (self.spriteMode == 4) {
         sprite_index = sprAvatarSuck;
         self.spriteMode = 5;
     }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objBlock">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>side_hit = place_meeting(phy_position_x+sign(hspeed),phy_position_y,other);
-bottom_hit = place_meeting(phy_position_x,phy_position_y+1,other);
-
-if (side_hit &amp;&amp; bottom_hit &amp;&amp; self.isJumping) {
-    self.canResetJump = false;
-    show_debug_message('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-}
-else if (side_hit) {
-    show_debug_message('side block!');
-    self.canResetJump = false;
-}
-else if (bottom_hit) {
-    show_debug_message('bottom block!')
-    self.isJumping = false;
-    self.canResetJump = true;
 }
 </string>
           </argument>
