@@ -1,5 +1,8 @@
 
 var returnString = "";
+if(ds_list_size(global.vacuumStack) > global.vacuumSize){
+    return "";
+}
 var suckTarget = instance_nearest(argument0, argument1, objDirtBlock);
 if(suckTarget != noone){
     returnString = "dirt";
