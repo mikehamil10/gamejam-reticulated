@@ -50,6 +50,7 @@
     <object>objects\enemMole</object>
     <object>objects\enemSpider</object>
     <object>objects\ObjVacUI</object>
+    <object>objects\UI</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\mikesRoom2</room>
