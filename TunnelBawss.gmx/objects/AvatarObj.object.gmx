@@ -462,12 +462,12 @@ if (self.spriteMode == 4) {
     } 
     
     // ________________________________________________________________ Sucking
-    if (keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_down)){
+    if ((keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_down)) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 3) &amp;&amp; joystick_direction(1) == vk_numpad2)){
         self.suckDirection = "down";
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
-    } else if (keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_up)){
+    } else if ((keyboard_check_pressed(vk_lcontrol) &amp;&amp; keyboard_check(vk_up)) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 3) &amp;&amp; joystick_direction(1) == vk_numpad8)){
         self.suckDirection = "up";
         isSucking = true;
         sprite_index = sprAvatarSuck;
@@ -477,7 +477,7 @@ if (self.spriteMode == 4) {
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
-    } else if (keyboard_check_pressed(vk_lshift)) { //TODO: controller equivalent
+    } else if (keyboard_check_pressed(vk_lshift) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 2))) { //TODO: controller equivalent
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 5;
