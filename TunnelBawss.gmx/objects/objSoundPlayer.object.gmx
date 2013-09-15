@@ -11,25 +11,29 @@
     <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>6</kind>
-            <sound>sndThemeMusic</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
+            <kind>1</kind>
+            <string>audio_play_music(sndThemeMusic, true);
+
+// Set the music volume to 60%
+audio_music_gain(0.3, 0);
+
+// Set the sound volume to 100%
+audio_sound_gain(sndVacuumForward, 1, 0);
+audio_sound_gain(sndVacuumReverse, 1, 0);
+</string>
           </argument>
         </arguments>
       </action>
