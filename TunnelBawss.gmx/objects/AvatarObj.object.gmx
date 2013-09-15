@@ -431,6 +431,25 @@ if (self.spriteMode == 4) {
                     }
                 }
             }
+            if(item == "bomb"){
+                show_debug_message("Pre: x: " + string(targetX) + "   y: " + string(targetY));
+                targetX = targetX - (targetX % 96)
+                targetY = targetY - (targetY % 96)
+                show_debug_message("Post: x: " + string(targetX) + "   y: " + string(targetY));
+                var i = 0;
+                with(objBomb){
+                    if(i == 0){
+                        show_debug_message("blowing:");
+                        if(place_free(targetX, targetY)){
+                            instance_create(targetX, targetY, objBomb);
+                        } else {
+                            scrVacuumSuck("bomb");
+                        }
+                        i = 1;
+                    }
+                }
+            }
+            
         }//if blowing
     }
 } else {

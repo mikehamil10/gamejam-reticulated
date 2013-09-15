@@ -108,7 +108,7 @@
   <PhysicsObjectLinearDamping>10</PhysicsObjectLinearDamping>
   <PhysicsObjectAngularDamping>0.100000001490116</PhysicsObjectAngularDamping>
   <PhysicsObjectFriction>10</PhysicsObjectFriction>
-  <PhysicsObjectAwake>0</PhysicsObjectAwake>
+  <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
     <point>128,128</point>
