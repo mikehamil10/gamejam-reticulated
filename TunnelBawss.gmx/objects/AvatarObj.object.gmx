@@ -514,12 +514,44 @@ if (self.spriteMode == 4) {
             <kind>1</kind>
             <string>if(!self.hitFrame){
     health--;
-    alarm[0] = 100;
+    alarm[1] = 180;
     self.hitFrame = true;
 }
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
@@ -535,11 +567,9 @@ if (self.spriteMode == 4) {
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>64,0</point>
-    <point>96,32</point>
+    <point>32,16</point>
+    <point>96,16</point>
     <point>96,96</point>
     <point>32,96</point>
-    <point>32,16</point>
-    <point>48,0</point>
   </PhysicsShapePoints>
 </object>
