@@ -53,7 +53,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0.3</string>
+            <string>0.15</string>
           </argument>
         </arguments>
       </action>
@@ -101,7 +101,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1200</string>
+            <string>1400</string>
           </argument>
         </arguments>
       </action>
@@ -535,10 +535,11 @@ if (self.spriteMode == 4) {
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
   <PhysicsShapePoints>
-    <point>32,32</point>
     <point>64,0</point>
     <point>96,32</point>
     <point>96,96</point>
     <point>32,96</point>
+    <point>32,16</point>
+    <point>48,0</point>
   </PhysicsShapePoints>
 </object>
