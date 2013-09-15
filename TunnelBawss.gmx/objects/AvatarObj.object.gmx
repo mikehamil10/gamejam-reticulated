@@ -518,7 +518,7 @@ if (self.spriteMode == 4) {
             <kind>1</kind>
             <string>if(!self.hitFrame){
     health--;
-    alarm[0] = 100;
+    alarm[1] = 180;
     self.hitFrame = true;
 }
 </string>
