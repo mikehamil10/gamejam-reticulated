@@ -279,6 +279,7 @@
     <instance objName="enemMole" x="768" y="2880" name="inst_D12BA047" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemSpider" x="1152" y="2880" name="inst_F7393590" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBomb" x="576" y="2688" name="inst_065F8CD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBomb" x="288" y="-192" name="inst_F1EAA46A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="UI" x="864" y="1056" name="inst_2052ADBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

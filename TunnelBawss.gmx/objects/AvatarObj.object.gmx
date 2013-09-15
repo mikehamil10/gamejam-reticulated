@@ -171,14 +171,14 @@ if (self.spriteMode == 4) {
             targetY += 96;
             
             if(item == "dirt"){
-                show_debug_message("Pre: x: " + string(targetX) + "   y: " + string(targetY));
+                show_debug_message("Pre dirt: x: " + string(targetX) + "   y: " + string(targetY));
                 targetX = targetX - (targetX % 96)
                 targetY = targetY - (targetY % 96)
-                show_debug_message("Post: x: " + string(targetX) + "   y: " + string(targetY));
+                show_debug_message("Post dirt: x: " + string(targetX) + "   y: " + string(targetY));
                 var i = 0;
                 with(objDirtBlock){
                     if(i == 0){
-                        show_debug_message("blowing:");
+                        show_debug_message("blowing dirt:");
                         if(place_free(targetX, targetY)){
                             instance_create(targetX, targetY, objDirtBlock);
                         } else {
@@ -187,16 +187,15 @@ if (self.spriteMode == 4) {
                         i = 1;
                     }
                 }
-            }
-            if(item == "bomb"){
-                show_debug_message("Pre: x: " + string(targetX) + "   y: " + string(targetY));
+            } else if(item == "bomb"){
+                show_debug_message("Pre bomb: x: " + string(targetX) + "   y: " + string(targetY));
                 targetX = targetX - (targetX % 96)
                 targetY = targetY - (targetY % 96)
-                show_debug_message("Post: x: " + string(targetX) + "   y: " + string(targetY));
+                show_debug_message("Post bomb: x: " + string(targetX) + "   y: " + string(targetY));
                 var i = 0;
                 with(objBomb){
                     if(i == 0){
-                        show_debug_message("blowing:");
+                        show_debug_message("blowing bomb:");
                         if(place_free(targetX, targetY)){
                             instance_create(targetX, targetY, objBomb);
                         } else {
