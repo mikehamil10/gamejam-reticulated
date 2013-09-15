@@ -16,6 +16,18 @@
     <sprite>sprites\sprSpiderIdle</sprite>
     <sprite>sprites\sprSpiderHanging</sprite>
     <sprite>sprites\VacUI</sprite>
+    <sprites name="UI">
+      <sprite>sprites\sprInventoryBar</sprite>
+      <sprite>sprites\sprHeart1</sprite>
+      <sprite>sprites\sprHeart2</sprite>
+      <sprite>sprites\sprHeart3</sprite>
+      <sprite>sprites\sprInventoryDirt</sprite>
+      <sprite>sprites\sprInventoryStone</sprite>
+      <sprite>sprites\sprInventoryDynamite</sprite>
+      <sprite>sprites\sprInventoryGas</sprite>
+      <sprite>sprites\sprInventoryTorch</sprite>
+      <sprite>sprites\sprInventoryOil</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -41,7 +53,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\mikesRoom2</room>
-    <room>rooms\qihansRoom</room>
+    <room>rooms\noahsRoom</room>
     <room>rooms\noahsRoom</room>
     <room>rooms\marksRoom</room>
     <room>rooms\justinsRoom</room>
