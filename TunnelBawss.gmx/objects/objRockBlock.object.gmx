@@ -48,7 +48,8 @@
             <string>var dy = self.y - other.y;
 var dx = self.x - other.x;
 //calculate the tangent of the collision angle
-if(abs(dy / dx) &gt; 3.1 &amp;&amp; dy &gt; 0){
+if(abs(dy / dx) &gt; 3.1 &amp;&amp; dy &gt; 0 ){
+    show_debug_message("tan rock: " + string(abs(dy / dx)));
     other.isJumping = false;
 }
 </string>

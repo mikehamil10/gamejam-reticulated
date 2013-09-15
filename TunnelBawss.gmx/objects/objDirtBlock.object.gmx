@@ -122,6 +122,7 @@ self.centerY += self.y
 var dx = self.x - other.x;
 //calculate the tangent of the collision angle
 if(abs(dy / dx) &gt; 3.1 &amp;&amp; dy &gt; 0){
+    show_debug_message("tan dirt: " + string(abs(dy / dx)));
     other.isJumping = false;
 }
 </string>

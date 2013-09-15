@@ -13,6 +13,8 @@
     <sprite>sprites\sprRock</sprite>
     <sprite>sprites\sprMoleIdle</sprite>
     <sprite>sprites\sprMoleHop</sprite>
+    <sprite>sprites\sprSpiderIdle</sprite>
+    <sprite>sprites\sprSpiderHanging</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -33,6 +35,7 @@
       <object>objects\objRockBlock</object>
     </objects>
     <object>objects\enemMole</object>
+    <object>objects\enemSpider</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\qihansRoom</room>

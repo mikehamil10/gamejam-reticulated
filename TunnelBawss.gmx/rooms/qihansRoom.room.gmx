@@ -241,16 +241,16 @@
     <instance objName="objDirtBlock" x="608" y="416" name="inst_83C43707" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="576" y="416" name="inst_B40A47F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="608" y="384" name="inst_9793E9CA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="320" name="inst_8C0E5B0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="352" name="inst_A2599F7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="288" name="inst_D1157CFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="544" name="inst_B7D107B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="512" name="inst_DA5DE08E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="480" name="inst_DC1BED2B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="448" name="inst_D6E6A199" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="416" name="inst_8DD89181" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="0" y="384" name="inst_99BAF43D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRockBlock" x="1248" y="544" name="inst_C13A8292" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="288" name="inst_C5A7C2F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="320" name="inst_5584411F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="352" name="inst_F4EB5DB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="384" name="inst_447C1B52" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="416" name="inst_988AE9B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="448" name="inst_5C31F926" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="480" name="inst_E66E28F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="512" name="inst_7903C359" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="0" y="544" name="inst_200EC098" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="bgRocks" x="0" y="256" w="32" h="32" xo="0" yo="0" id="10000001" name="inst_BC7BEAF4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
