@@ -3,8 +3,8 @@
   <caption></caption>
   <width>3744</width>
   <height>2976</height>
-  <vsnap>96</vsnap>
-  <hsnap>96</hsnap>
+  <vsnap>16</vsnap>
+  <hsnap>16</hsnap>
   <isometric>0</isometric>
   <speed>60</speed>
   <persistent>0</persistent>
@@ -249,7 +249,7 @@
     <instance objName="objDirtBlock" x="1152" y="1728" name="inst_5ECACB26" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="192" y="1728" name="inst_47112E2F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRockBlock" x="96" y="288" name="inst_934662E0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objRockBlock" x="192" y="288" name="inst_0EF283FF" locked="0" code="draw_text(self.x,self.y,&quot;Cave in door?&quot;);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRockBlock" x="192" y="288" name="inst_0EF283FF" locked="0" code="draw_text(192,384,&quot;Cave in door?&quot;);" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRockBlock" x="0" y="288" name="inst_C3C5BBFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRockBlock" x="0" y="192" name="inst_E0ACC677" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRockBlock" x="1152" y="864" name="inst_25F2F774" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -541,7 +541,7 @@
     <instance objName="objDirtBlock" x="1728" y="1920" name="inst_29818FF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDirtBlock" x="1632" y="1920" name="inst_E18932B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEndDoor" x="3648" y="192" name="inst_0E027B04" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="AvatarObj" x="480" y="2784" name="inst_BA6ECCFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="AvatarObj" x="112" y="2832" name="inst_BA6ECCFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSoundPlayer" x="0" y="0" name="inst_6637FDC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemMole" x="1056" y="2880" name="inst_E31C82AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemMole" x="384" y="2208" name="inst_01350255" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -564,6 +564,7 @@
     <instance objName="enemMole" x="1632" y="1728" name="inst_02AB0A2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemMole" x="2400" y="1152" name="inst_BB4598AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="enemMole" x="3264" y="2784" name="inst_29CC9DE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="enemSpider" x="2112" y="1824" name="inst_9F5CF66D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBomb" x="96" y="1728" name="inst_3FEF6901" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBomb" x="384" y="1824" name="inst_EEACB9AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBomb" x="1152" y="1824" name="inst_3FE41930" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
