@@ -83,6 +83,7 @@
     <object>objects\objExplosion</object>
     <object>objects\startListener</object>
     <object>objects\objControlListener</object>
+    <object>objects\NML001</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\CreditsRoom</room>
@@ -92,6 +93,11 @@
     <room>rooms\noahsRoom</room>
     <room>rooms\puzzleroom2</room>
     <room>rooms\qihansRoom</room>
+    <room>rooms\room11</room>
+    <room>rooms\room12</room>
+    <room>rooms\room13</room>
+    <room>rooms\room14</room>
+    <room>rooms\WinCredits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
