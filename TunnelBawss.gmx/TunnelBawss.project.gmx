@@ -66,6 +66,7 @@
     <script>scripts\scrVacuumBlow.gml</script>
     <script>scripts\scrVacuumBuild.gml</script>
     <script>scripts\scrSuckObject.gml</script>
+    <script>scripts\hitBlink.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\AvatarObj</object>
