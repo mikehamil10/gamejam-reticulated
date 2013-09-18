@@ -81,7 +81,7 @@
     </objects>
     <object>objects\enemMole</object>
     <object>objects\enemSpider</object>
-    <object>objects\ObjVacUI</object>
+    <object>objects\objClod01</object>
     <object>objects\UI</object>
     <object>objects\objSoundPlayer</object>
     <object>objects\objEndDoor</object>

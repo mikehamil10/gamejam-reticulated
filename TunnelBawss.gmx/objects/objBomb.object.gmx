@@ -238,15 +238,15 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="objRockBlock">
+    <event eventtype="4" ename="objBlock">
       <action>
         <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
@@ -255,29 +255,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>collision</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objDirtBlock">
-      <action>
-        <libid>1</libid>
-        <id>605</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>none</string>
+            <string>if (self.phy_speed_y&gt;5){
+alarm[0] = 180;
+audio_play_sound(sndBombTick,1,0);
+isBlowingup=1;
+}
+
+</string>
           </argument>
         </arguments>
       </action>
