@@ -45,11 +45,14 @@
       <sprite>sprites\bomb</sprite>
       <sprite>sprites\levelEnd</sprite>
       <sprite>sprites\sprInvBlock</sprite>
+      <sprite>sprites\sprGasBlock</sprite>
     </sprites>
     <sprite>sprites\VacUI</sprite>
     <sprite>sprites\sprite22</sprite>
     <sprite>sprites\sprExplosion</sprite>
     <sprite>sprites\sprClod01</sprite>
+    <sprite>sprites\sprGas</sprite>
+    <sprite>sprites\sprGreenGass</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -76,7 +79,9 @@
       <object>objects\objDirtBlock</object>
       <object>objects\objRockBlock</object>
       <object>objects\objInvBlock</object>
+      <object>objects\objGasBlock</object>
       <object>objects\objBlock</object>
+      <object>objects\objGas01</object>
       <object>objects\objBomb</object>
     </objects>
     <object>objects\enemMole</object>
