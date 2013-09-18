@@ -89,7 +89,6 @@
     <object>objects\NML001</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\CreditsRoom</room>
     <room>rooms\noahsRoom</room>
     <room>rooms\puzzleroom2</room>
     <room>rooms\qihansRoom</room>
@@ -98,11 +97,13 @@
     <room>rooms\room13</room>
     <room>rooms\room14</room>
     <room>rooms\StoryRoom</room>
+    <room>rooms\CreditsRoom</room>
     <room>rooms\ControlsScreen</room>
     <room>rooms\Introscreen</room>
     <room>rooms\WinCredits</room>
   </rooms>
-  <constants number="1">
+  <constants number="2">
+    <constant name="blinkFrameLength">6</constant>
     <constant name="halfBlockWidth">48</constant>
   </constants>
   <help>
