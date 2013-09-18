@@ -41,10 +41,10 @@ canResetJump = false;
 hitFrame = false;
 suckDirection = "";
 hitBlinkCounter=1;
-blinksPerSecond = 3;
 phy_fixed_rotation = true;
 tapCheck=1;
-
+blinkFrameLength=7;
+invincibilityTime=180;
 scrVacuumBuild()
 </string>
           </argument>
@@ -393,14 +393,14 @@ dy = self.y - other.y;
 
 
 if (dx != 0) {
-    if (abs(dy/dx) &lt; 2*halfBlockWidth) {
+    if ((dy/dx) &lt; 2*halfBlockWidth) {
         physics_apply_impulse(phy_position_x, phy_position_y, 0, -15*sign(dx));
     }
 }
 
 
 if (dy != 0) {
-    if (abs(dx/dy) &lt; 0.44) {
+    if (((sign(dx)*dx)/dy) &gt; -0.44) {
         bottom_hit = true;
     }
     else {
@@ -408,12 +408,21 @@ if (dy != 0) {
     }
 }
 else {
-    bottom_hit = false;
+    bottom_hit = false;//This needs to be everywhere but the collision code...
+    
 }
 
 if (bottom_hit &amp;&amp; phy_linear_velocity_y &lt; 10) {
         self.canResetJump = true;
         self.isJumping = false;
+}
+ //If falling fast, take damage 
+ //STILL GLITCHY!!
+if (bottom_hit &amp;&amp; self.phy_speed_y &gt; injuryVelocity &amp;&amp; self.hitFrame==false){ //physics_
+alarm[1] = self.invincibilityTime;
+//audio_play_sound(sndHitGroan,1,0); //;p
+self.hitFrame=true;
+health--;
 }
 /*
 // trying simpler check to deal with not walkking/jumping bug NML
@@ -427,7 +436,12 @@ else{
 //  self.canResetJump = true;
 //        self.isJumping = false;
  }
- */
+ */ 
+ 
+
+ 
+
+
 </string>
           </argument>
         </arguments>
@@ -524,7 +538,7 @@ else{
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>(self.hitBlinkCounter mod blinkFrameLength)==1</string>
+            <string>(self.hitBlinkCounter mod self.blinkFrameLength)==1</string>
           </argument>
         </arguments>
       </action>
@@ -596,7 +610,7 @@ else{
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>(self.hitBlinkCounter mod (2*blinkFrameLength))==1</string>
+            <string>(self.hitBlinkCounter mod (2*self.blinkFrameLength))==1</string>
           </argument>
         </arguments>
       </action>
