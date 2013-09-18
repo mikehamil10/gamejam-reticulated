@@ -44,8 +44,10 @@ hitBlinkCounter=1;
 phy_fixed_rotation = true;
 tapCheck=1;
 blinkFrameLength=7;
+gonnaHurt=0;
 invincibilityTime=180;
-scrVacuumBuild()
+scrVacuumBuild();
+
 </string>
           </argument>
         </arguments>
@@ -119,6 +121,9 @@ if (keyboard_check_pressed(vk_escape)){
     {
         room_goto_next();
     }
+}
+if (self.phy_speed_y &gt;injuryVelocity &amp;&amp; self.hitFrame==false){
+self.gonnaHurt=1;
 }
 
 // are we currently in the middle of the 'suck' animation?
@@ -418,10 +423,11 @@ if (bottom_hit &amp;&amp; phy_linear_velocity_y &lt; 10) {
 }
  //If falling fast, take damage 
  //STILL GLITCHY!!
-if (bottom_hit &amp;&amp; self.phy_speed_y &gt; injuryVelocity &amp;&amp; self.hitFrame==false){ //physics_
+if (bottom_hit &amp;&amp; self.gonnaHurt==1 &amp;&amp; self.hitFrame==false){ //physics_
 alarm[1] = self.invincibilityTime;
 //audio_play_sound(sndHitGroan,1,0); //;p
 self.hitFrame=true;
+self.gonnaHurt=0;
 health--;
 }
 /*
