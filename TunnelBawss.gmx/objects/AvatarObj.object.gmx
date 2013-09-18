@@ -43,6 +43,7 @@ suckDirection = "";
 hitBlinkCounter=1;
 blinksPerSecond = 3;
 phy_fixed_rotation = true;
+tapCheck=1;
 
 scrVacuumBuild()
 </string>
@@ -120,9 +121,6 @@ if (keyboard_check_pressed(vk_escape)){
     }
 }
 
-
-
-
 // are we currently in the middle of the 'suck' animation?
 if (self.spriteMode == 4) {
     // Yes. Don't allow movement, and wait until the animation is done
@@ -160,7 +158,8 @@ if (self.spriteMode == 4) {
         self.suck = 0;
         self.spriteMode = 0;
     } else if (image_index &gt; 6 &amp;&amp; self.suck == 0 ){
-        //don't spit out more than one object
+
+                //don't spit out more than one object
         self.suck = 1;
         //spit shit out
         var item = scrVacuumBlow();
@@ -168,11 +167,13 @@ if (self.spriteMode == 4) {
         if(item != "" ){
             var targetX = self.x;
             var targetY = self.y;
+//NML TODO Add Shooting mechanisim on long press
             
             //extra check to ensure proper horizontal blowing target:
             if (image_xscale &gt; 0) targetX -= (image_xscale * 48);
             else targetX -= (image_xscale * 96);
             targetY += 96;
+//placing when tapCheck&lt;12
             
             if(item == "dirt"){
                 show_debug_message("Pre dirt: x: " + string(targetX) + "   y: " + string(targetY));
@@ -183,9 +184,15 @@ if (self.spriteMode == 4) {
                 with(objDirtBlock){
                     if(i == 0){
                         show_debug_message("blowing dirt:");
-                        if(place_free(targetX, targetY)){
-                            instance_create(targetX, targetY, objDirtBlock);
-                        } else {
+                        if(place_free(targetX, targetY))
+                        {
+                         if(longPress){
+                          //shoot stuff
+                         } else{
+                                instance_create(targetX, targetY, objDirtBlock);
+                        }
+                        }else 
+                        {
                             scrVacuumSuck("dirt");
                         }
                         i = 1;
@@ -200,9 +207,15 @@ if (self.spriteMode == 4) {
                 with(objBomb){
                     if(i == 0){
                         show_debug_message("blowing bomb:");
-                        if(place_free(targetX, targetY)){
-                            instance_create(targetX, targetY, objBomb);
-                        } else {
+                        if(place_free(targetX, targetY))
+                        {
+                         if(longPress){
+                          //shoot stuff
+                          }else{
+                                instance_create(targetX, targetY, objBomb);
+                        }
+                        }else 
+                        {
                             scrVacuumSuck("bomb");
                         }
                         i = 1;
@@ -210,7 +223,10 @@ if (self.spriteMode == 4) {
                 }
             }
             
+   
         }//if blowing
+
+
     }
 } else {
     // No. Handle movement
@@ -266,11 +282,14 @@ if (self.spriteMode == 4) {
         sprite_index = sprAvatarSuck;
         self.spriteMode = 4;
     } else if (keyboard_check_pressed(vk_lshift) || (joystick_exists(1) &amp;&amp; joystick_check_button(1, 2))) {
+        tapCheck++;
         audio_play_sound(sndVacuumReverse, 100, false);
         isSucking = true;
         sprite_index = sprAvatarSuck;
         self.spriteMode = 5;
-    }
+    } else if ((keyboard_check_released(vk_lshift) || (joystick_exists(1) &amp;&amp; !joystick_check_button(1, 2)))) {
+//nevermind
+}
 }
 </string>
           </argument>
