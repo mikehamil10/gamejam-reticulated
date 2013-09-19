@@ -44,6 +44,7 @@
       <sprite>sprites\sprDirt</sprite>
       <sprite>sprites\bomb</sprite>
       <sprite>sprites\levelEnd</sprite>
+      <sprite>sprites\collapsedDoor</sprite>
       <sprite>sprites\sprInvBlock</sprite>
       <sprite>sprites\sprGasBlock</sprite>
     </sprites>
@@ -71,7 +72,9 @@
     <script>scripts\scrVacuumBuild.gml</script>
     <script>scripts\scrSuckObject.gml</script>
     <script>scripts\hitBlink.gml</script>
-    <script>scripts\script6.gml</script>
+    <script>scripts\NMLtestScript.gml</script>
+    <script>scripts\MarkTestScript.gml</script>
+    <script>scripts\MikeTestScript.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\AvatarObj</object>
@@ -90,12 +93,15 @@
     <object>objects\UI</object>
     <object>objects\objSoundPlayer</object>
     <object>objects\objEndDoor</object>
+    <object>objects\objColDoor</object>
+    <object>objects\invisCheckpoint</object>
     <object>objects\objExplosion</object>
     <object>objects\startListener</object>
     <object>objects\objControlListener</object>
     <object>objects\NML001</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Introscreen</room>
     <room>rooms\noahsRoom</room>
     <room>rooms\puzzleroom2</room>
     <room>rooms\qihansRoom</room>
@@ -106,11 +112,11 @@
     <room>rooms\StoryRoom</room>
     <room>rooms\CreditsRoom</room>
     <room>rooms\ControlsScreen</room>
-    <room>rooms\Introscreen</room>
     <room>rooms\WinCredits</room>
   </rooms>
-  <constants number="4">
-    <constant name="injuryVelocity">25</constant>
+  <constants number="5">
+    <constant name="halfCharWidth">32</constant>
+    <constant name="injuryVelocity">10</constant>
     <constant name="longPress">0</constant>
     <constant name="tapCheckLimit">10</constant>
     <constant name="halfBlockWidth">48</constant>

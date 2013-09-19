@@ -46,6 +46,10 @@ tapCheck=1;
 blinkFrameLength=7;
 gonnaHurt=0;
 invincibilityTime=180;
+
+//self.x=global.checkpointX;
+//self.y=global.checkpointY;
+ 
 scrVacuumBuild();
 
 </string>
@@ -119,10 +123,15 @@ which mode the dwarf is in, so I made a spriteMode variable with the following m
 if (keyboard_check_pressed(vk_escape)){
     if(room_next(room) != -1)
     {
-        room_goto_next();
+               room_goto_next();
     }
-}
-if (self.phy_speed_y &gt;injuryVelocity &amp;&amp; self.hitFrame==false){
+    }    
+
+if (self.phy_speed_y &gt;injuryVelocity*3 &amp;&amp; self.hitFrame==false){
+self.gonnaHurt=3;
+} else if (self.phy_speed_y &gt;injuryVelocity*2 &amp;&amp; self.hitFrame==false){
+self.gonnaHurt=2;
+}else if (self.phy_speed_y &gt;injuryVelocity &amp;&amp; self.hitFrame==false){
 self.gonnaHurt=1;
 }
 
@@ -143,7 +152,7 @@ if (self.spriteMode == 4) {
         var targetY = self.y;
         //update the suck coordinates based on the direction we're facing
         if(self.suckDirection == "side"){
-            targetX -= (image_xscale * 48);
+            targetX -= (image_xscale * halfCharWidth);
         } else if(self.suckDirection == "up"){
             targetY -= 96;
         } else if(self.suckDirection == "down"){
@@ -329,6 +338,33 @@ if (self.spriteMode == 4) {
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="enemSpider">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!self.hitFrame){
+    health--;
+    alarm[1] = self.invincibilityTime;
+    self.hitFrame = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="enemMole">
       <action>
         <libid>1</libid>
@@ -348,7 +384,7 @@ if (self.spriteMode == 4) {
             <kind>1</kind>
             <string>if(!self.hitFrame){
     health--;
-    alarm[1] = 180;
+    alarm[1] = self.invincibilityTime;
     self.hitFrame = true;
 }
 </string>
@@ -833,6 +869,6 @@ self.hitBlinkCounter++;
     <point>88,96</point>
     <point>40,96</point>
     <point>32,16</point>
-    <point>64,12</point>
+    <point>64,0</point>
   </PhysicsShapePoints>
 </object>

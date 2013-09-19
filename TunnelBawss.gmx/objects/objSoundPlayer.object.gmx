@@ -33,6 +33,8 @@ audio_music_gain(0.3, 0);
 // Set the sound volume to 100%
 audio_sound_gain(sndVacuumForward, 1, 0);
 audio_sound_gain(sndVacuumReverse, 1, 0);
+
+ 
 </string>
           </argument>
         </arguments>
