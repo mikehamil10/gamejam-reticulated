@@ -39,7 +39,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>gasTimer=180;
+            <string>gasTimer=60;
 isFree=1;
 
 </string>
@@ -64,9 +64,26 @@ isFree=1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(self.gasTimer&lt;1){
+            <string>if(self.gasTimer&lt;2){
 //spit out gas blocks
-gasTimer=180;//Constant?
+ 
+if(place_free(self.x,(self.y-(2*halfBlockWidth+2)))){//top
+instance_create(self.x,(self.y-(2*halfBlockWidth+2)), objGas01)
+}
+ if(place_free(self.x,(self.y+(2*halfBlockWidth+2)))){//bottom
+instance_create(self.x,(self.y+(2*halfBlockWidth+2)), objGas01);
+
+} if(place_free(self.x+(2*halfBlockWidth+2),self.y)){//sideR
+instance_create(self.x+(2*halfBlockWidth+2),self.y,objGas01);
+
+} if(place_free(self.x-(2*halfBlockWidth+2),self.y)){//sideL
+instance_create(self.x-(2*halfBlockWidth+2),self.y,objGas01);
+gasTimer=10;//Constant?
+}
+
+
+
+gasTimer=10;//Constant?
 }else if (self.gasTimer&gt;1){
 self.gasTimer--;
 }
