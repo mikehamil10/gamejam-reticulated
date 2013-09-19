@@ -30,10 +30,36 @@ self.alarm[0]=gasGeneratonTime;
 GasSource = instance_nearest(self.x,self.y, objGasBlock);
 //always
 self.alarm[1]=round(gasGeneratonTime*( 
-10*halfBlockWidth /sqrt (abs((GasSource.x-self.x)^2 *(GasSource.y-self.y)^2 ))
+gasDistanceDecayConst/(sqrt(abs((GasSource.x-self.x)^2 +(GasSource.y-self.y)^2 ))+1)
 
 ));
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>202</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_change_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>10</kind>
+            <object>objExplosion</object>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -131,36 +157,18 @@ instance_create(self.x-(2*halfBlockWidth+2),self.y,objGas01);
 {
 instance_destroy()
 }
- 
 
+//manual explosion trigger check?
+  BoomNow =instance_nearest(self.x,self.y, objExplosion );
+if (BoomNow != noone)
+{
+if ((abs(self.x-BoomNow.x)&lt;halfBlockWidth+1) || (abs(self.y-BoomNow.y)&lt;halfBlockWidth+1))
+// instance_change(objExplosion, true); too fast...
+alarm[2]=(5 +random(10));
+ 
+}
 
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="objExplosion">
-      <action>
-        <libid>1</libid>
-        <id>202</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_change_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>objExplosion</object>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
           </argument>
         </arguments>
       </action>
