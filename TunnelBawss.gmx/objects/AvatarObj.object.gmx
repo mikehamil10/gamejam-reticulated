@@ -188,6 +188,15 @@ if (self.spriteMode == 4) {
             else targetX -= (image_xscale * 96);
             targetY += 96;
 //placing when tapCheck&lt;12
+            //instanceofGas = instance_nearest(targetX,targetY,objGasBlock);
+           if (DevFlag==1){
+            with instance_nearest(targetX,targetY,objGasBlock){
+            instance_destroy();
+            }
+            }            
+            with instance_nearest(targetX,targetY,objGas01){
+            instance_destroy();
+            }
             
             if(item == "dirt"){
                 show_debug_message("Pre dirt: x: " + string(targetX) + "   y: " + string(targetY));

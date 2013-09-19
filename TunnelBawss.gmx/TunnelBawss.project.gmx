@@ -114,7 +114,10 @@
     <room>rooms\ControlsScreen</room>
     <room>rooms\WinCredits</room>
   </rooms>
-  <constants number="5">
+  <constants number="8">
+    <constant name="DevFlag">0</constant>
+    <constant name="gasRelativeDecayTime">1.1</constant>
+    <constant name="gasGeneratonTime">60</constant>
     <constant name="halfCharWidth">32</constant>
     <constant name="injuryVelocity">10</constant>
     <constant name="longPress">0</constant>
