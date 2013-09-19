@@ -468,12 +468,19 @@ if (bottom_hit &amp;&amp; phy_linear_velocity_y &lt; 10) {
 }
  //If falling fast, take damage 
  //STILL GLITCHY!!
+ 
+ 
 if (bottom_hit &amp;&amp; self.gonnaHurt==1 &amp;&amp; self.hitFrame==false){ //physics_
 alarm[1] = self.invincibilityTime;
 //audio_play_sound(sndHitGroan,1,0); //;p
-self.hitFrame=true;
+
+if DevFlag==1{
+//hehe
+}else{
+health=health-self.gonnaHurt;
+}
 self.gonnaHurt=0;
-health--;
+self.hitFrame=true;
 }
 /*
 // trying simpler check to deal with not walkking/jumping bug NML
