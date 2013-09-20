@@ -75,7 +75,8 @@
     <script>scripts\NMLtestScript.gml</script>
     <script>scripts\MarkTestScript.gml</script>
     <script>scripts\MikeTestScript.gml</script>
-    <script>scripts\script9.gml</script>
+    <script>scripts\placeItem.gml</script>
+    <script>scripts\findInArmsReach.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\AvatarObj</object>
@@ -115,15 +116,16 @@
     <room>rooms\ControlsScreen</room>
     <room>rooms\WinCredits</room>
   </rooms>
-  <constants number="8">
+  <constants number="9">
     <constant name="DevFlag">0</constant>
-    <constant name="gasGeneratonTime">10</constant>
+    <constant name="gasMaintainTime">5</constant>
+    <constant name="gasGeneratonTime">60</constant>
     <constant name="halfCharWidth">32</constant>
     <constant name="injuryVelocity">10</constant>
     <constant name="longPress">0</constant>
     <constant name="tapCheckLimit">10</constant>
     <constant name="halfBlockWidth">48</constant>
-    <constant name="gasDistanceDecayConst">halfBlockWidth*1000</constant>
+    <constant name="gasDistanceDecayConst">halfBlockWidth*20</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

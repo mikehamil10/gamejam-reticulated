@@ -120,12 +120,15 @@ which mode the dwarf is in, so I made a spriteMode variable with the following m
 */
 
 //move to the next room on esc
-if (keyboard_check_pressed(vk_escape)){
+if (DevFlag==1 &amp;&amp; keyboard_check_pressed(vk_escape)){
     if(room_next(room) != -1)
-    {
-               room_goto_next();
-    }
+    {               room_goto_next();    }
     }    
+if (DevFlag==1 &amp;&amp; keyboard_check_pressed(vk_backspace)){
+    
+                   room_restart();    
+    }      
+    
 
 if (self.phy_speed_y &gt;injuryVelocity*3 &amp;&amp; self.hitFrame==false){
 self.gonnaHurt=3;
