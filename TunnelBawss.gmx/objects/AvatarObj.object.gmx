@@ -336,14 +336,14 @@ if (self.spriteMode == 4) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!self.hitFrame &amp;&amp; DevFlag !=1){
-   self.hitFrame = true; 
-    health--;
-    health --;
-    alarm[1] = 180;
+            <string>//if(!self.hitFrame &amp;&amp; DevFlag !=1){
+  // self.hitFrame = true; 
+   // health--;
+   // health --;
+    //alarm[1] = 180;
     
     physics_apply_force(self.x, self.y, sign(self.x-other.x)*other.xForce, sign(self.y-other.y)*other.yForce)
-}
+//}
 </string>
           </argument>
         </arguments>

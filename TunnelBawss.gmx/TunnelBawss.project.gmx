@@ -75,6 +75,7 @@
     <script>scripts\NMLtestScript.gml</script>
     <script>scripts\MarkTestScript.gml</script>
     <script>scripts\MikeTestScript.gml</script>
+    <script>scripts\script9.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\AvatarObj</object>
@@ -115,14 +116,14 @@
     <room>rooms\WinCredits</room>
   </rooms>
   <constants number="8">
-    <constant name="DevFlag">1</constant>
-    <constant name="gasGeneratonTime">60</constant>
+    <constant name="DevFlag">0</constant>
+    <constant name="gasGeneratonTime">10</constant>
     <constant name="halfCharWidth">32</constant>
     <constant name="injuryVelocity">10</constant>
     <constant name="longPress">0</constant>
     <constant name="tapCheckLimit">10</constant>
     <constant name="halfBlockWidth">48</constant>
-    <constant name="gasDistanceDecayConst">halfBlockWidth*3</constant>
+    <constant name="gasDistanceDecayConst">halfBlockWidth*1000</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

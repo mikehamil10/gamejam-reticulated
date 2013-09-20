@@ -124,7 +124,9 @@ with(enemSpider){
 }
 with(AvatarObj){
     if(abs(x - explosionX) &lt; 130 &amp;&amp; abs(y - explosionY) &lt; 130){
-        health -= 2;
+if (DevFlag !=1 &amp;&amp; self.hitFrame=false){  health -= 2;}
+self.hitFrame=1;
+self.alarm[1]=self.invincibilityTime;
     }
 }
 </string>

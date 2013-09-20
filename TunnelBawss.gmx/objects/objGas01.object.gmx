@@ -29,10 +29,11 @@
 self.alarm[0]=gasGeneratonTime;
 GasSource = instance_nearest(self.x,self.y, objGasBlock);
 //always
-self.alarm[1]=round(gasGeneratonTime*( 
-gasDistanceDecayConst/(sqrt(abs((GasSource.x-self.x)^2 +(GasSource.y-self.y)^2 ))+1)
+// self.alarm[1]=round(gasGeneratonTime*( gasDistanceDecayConst/(sqrt((power(GasSource.x-self.x,2) +power(GasSource.y-self.y,2) ))+1)*5000));
 
-));
+self.alarm[1]=
+round(gasGeneratonTime*( 
+gasDistanceDecayConst/(sqrt((power(GasSource.x-self.x,2) +power(GasSource.y-self.y,2) ))+1)));
 </string>
           </argument>
         </arguments>
@@ -98,17 +99,17 @@ gasDistanceDecayConst/(sqrt(abs((GasSource.x-self.x)^2 +(GasSource.y-self.y)^2 )
           <argument>
             <kind>1</kind>
             <string>
-if(place_free(self.x,(self.y-(2*halfBlockWidth+2)))){//top
-instance_create(self.x,(self.y-(2*halfBlockWidth+2)), objGas01)
+if(place_free(self.x,(self.y-(2*halfBlockWidth)))){//top
+instance_create(self.x,(self.y-(2*halfBlockWidth)), objGas01)
 }
- if(place_free(self.x,(self.y+(2*halfBlockWidth+2)))){//bottom
-instance_create(self.x,(self.y+(2*halfBlockWidth+2)), objGas01);
+ if(place_free(self.x,(self.y+(2*halfBlockWidth)))){//bottom
+instance_create(self.x,(self.y+(2*halfBlockWidth)), objGas01);
 
-} if(place_free(self.x+(2*halfBlockWidth+2),self.y)){//sideR
-instance_create(self.x+(2*halfBlockWidth+2),self.y,objGas01);
+} if(place_free(self.x+(2*halfBlockWidth),self.y)){//sideR
+instance_create(self.x+(2*halfBlockWidth),self.y,objGas01);
 
-} if(place_free(self.x-(2*halfBlockWidth+2),self.y)){//sideL
-instance_create(self.x-(2*halfBlockWidth+2),self.y,objGas01);
+} if(place_free(self.x-(2*halfBlockWidth),self.y)){//sideL
+instance_create(self.x-(2*halfBlockWidth),self.y,objGas01);
 }
 </string>
           </argument>
@@ -159,12 +160,16 @@ instance_destroy()
 }
 
 //manual explosion trigger check?
-  BoomNow =instance_nearest(self.x,self.y, objExplosion );
+BoomNow =instance_nearest(self.x,self.y, objExplosion );
 if (BoomNow != noone)
 {
-if ((abs(self.x-BoomNow.x)&lt;halfBlockWidth+1) || (abs(self.y-BoomNow.y)&lt;halfBlockWidth+1))
+
+if (sqrt(power(self.x-BoomNow.x,2) + power(self.y-BoomNow.y,2)) &lt; halfBlockWidth*3) {
 // instance_change(objExplosion, true); too fast...
-alarm[2]=(5 +random(10));
+WTF=random(60);
+alarm[2]=random(60);
+
+}
  
 }
 
