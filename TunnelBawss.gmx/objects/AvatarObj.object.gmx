@@ -155,8 +155,8 @@ if (self.spriteMode == 4) {
         //don't suck up more than one object
         self.suck = 1;
         //suck up the object in the middle of the animation
-        var targetX = self.x;
-        var targetY = self.y;
+        var targetX = self.phy_position_x;
+        var targetY = self.phy_position_y;
         //update the suck coordinates based on the direction we're facing
         if(self.suckDirection == "side"){
             targetX -= (image_xscale * halfCharWidth);
@@ -187,8 +187,8 @@ if (self.spriteMode == 4) {
         var item = scrVacuumBlow();
         //find the location we want to start the object to appear around
         if(item != "" ){
-            var targetX = self.x;
-            var targetY = self.y;
+            var targetX = self.phy_position_x;
+            var targetY = self.phy_position_y;
 //NML TODO Add Shooting mechanisim on long press
             
             //ensure proper horizontal blowing target:
@@ -452,14 +452,10 @@ if (self.spriteMode == 4) {
 // I've set the restitution as low as I can for the engine to behave as we need it to.  Higher values 
 // create a slight sensation of friction, and can lead to jumps coming up short if held against walls.  
 // There's still a lot to learn about this physics engine, but I'm confident we can get a nicely polished
-// feel by the end of development.  I've set the collision mask for the avatar back to a rectangle, 
+// feel soon even with what I know now.  I've set the collision mask for the avatar back to a rectangle, 
 // due to jumping issues caused by the previously outward-sloped edges.  I understand we'll want 
 // more a more accurate collision mask for enemy collisions, so in the future we may have to use
 // separate masks to differentiate and get the right behavior.  
-//
-// One other bug I have to note, which is that occasionally, for reasons I can't explain, certain
-// blocks of dirt won't reset the jump when landing on top, despite the physics engine showing a
-// collision.  Others will reset the jump even when blown out in the exact same location.  
 //
 // Still isn't perfect, but it's getting somewhere.  Next on my list is the sucking/blowing bugs
 // (which actually are simple fixes, I promise), before returning to the jump stuff.  --Mark  
